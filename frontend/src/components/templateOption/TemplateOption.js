@@ -12,7 +12,7 @@ function TemplateOption({ handleTemplateOption }) {
       headers: { Authorization: token },
     };
     axios
-      .get("http://localhost:3100/api/v1/user/viewtemplates", config)
+      .get("https://bulkemailtool-08un.onrender.com/api/v1/user/viewtemplates", config)
       .then((res) => {
         setTemplates(res.data.templates);
       })

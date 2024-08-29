@@ -44,7 +44,7 @@ function Groups() {
 
   const onHandleConfirm = () => {
     axios
-      .post(`http://localhost:3100/api/v1/user/deletegroup/${groupId}`)
+      .post(`https://bulkemailtool-08un.onrender.com/api/v1/user/deletegroup/${groupId}`)
       .then((res) => {
         console.log("successfully deleted");
         setModalClose(true);
@@ -72,7 +72,7 @@ function Groups() {
       headers: { Authorization: token },
     };
     axios
-      .get("http://localhost:3100/api/v1/user/viewgroups", config)
+      .get("https://bulkemailtool-08un.onrender.com/api/v1/user/viewgroups", config)
       .then((res) => {
         setGroups(res.data.groups);
       })
